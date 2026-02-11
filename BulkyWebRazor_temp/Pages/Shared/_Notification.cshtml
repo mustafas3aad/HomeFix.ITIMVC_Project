@@ -1,0 +1,27 @@
+﻿
+@*    Note
+    ADD success Notification with TempData *@
+@if (TempData["Success"] != null)
+{
+    @* Add jQuary File from wwwroot Add SUCCESS Notification *@
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    @* Add CDN (JS) Link from (TOASTR) site to Add SUCCESS Notification  *@
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["Success"]');
+    </script>
+
+
+}
+@if (TempData["error"] != null)
+{
+    @* Add jQuary File from wwwroot Add error Notification *@
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    @* Add CDN (JS) Link from (TOASTR) site to Add error Notification  *@
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.error('@TempData["error"]');
+    </script>
+}

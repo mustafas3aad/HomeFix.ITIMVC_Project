@@ -1,0 +1,288 @@
+﻿@page
+@model EmailModel
+@{
+    ViewData["Title"] = "Manage Email";
+    ViewData["ActivePage"] = ManageNavPages.Email;
+}
+
+<style>
+   
+    :root {
+        --primary-navy: #1e3a5f;
+        --secondary-navy: #2d4a6f;
+        --accent-blue: #3b9cff;
+        --light-blue: #4da8ff;
+        --text-white: #ffffff;
+        --text-light: #e0e6ed;
+        --background-dark: #0f1f35;
+        --background-gradient-start: #1a2942;
+        --background-gradient-end: #0f1f35;
+        --success-green: #4caf50;
+    }
+
+    body {
+        background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+        min-height: 100vh;
+        color: var(--text-white);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h3, h1, h2, h4, h5, h6 {
+        color: var(--text-white);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+   
+    .profile-container {
+        background: rgba(30, 58, 95, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+
+   
+    .form-floating {
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+        .form-floating > label {
+            position: static;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+            transform: none;
+            opacity: 1;
+            font-size: 0.95rem;
+        }
+
+        .form-floating > .form-control,
+        .form-floating > .form-control:disabled {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(59, 156, 255, 0.3);
+            color: var(--text-white);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            height: auto;
+            min-height: 50px;
+            transition: all 0.3s ease;
+        }
+
+            .form-floating > .form-control:focus {
+                background-color: rgba(255, 255, 255, 0.15);
+                border-color: var(--accent-blue);
+                box-shadow: 0 0 0 0.25rem rgba(59, 156, 255, 0.25);
+                color: var(--text-white);
+                outline: none;
+            }
+
+                .form-floating > .form-control:focus ~ label {
+                    color: var(--accent-blue);
+                }
+
+            .form-floating > .form-control::placeholder {
+                color: rgba(255, 255, 255, 0.4);
+            }
+
+            .form-floating > .form-control:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+   
+    .input-group {
+        display: flex;
+        align-items: stretch;
+    }
+
+        .input-group .form-control {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    .input-group-append {
+        display: flex;
+    }
+
+    .input-group-text {
+        background-color: rgba(76, 175, 80, 0.2);
+        border: 2px solid rgba(76, 175, 80, 0.5);
+        border-left: none;
+        color: var(--success-green);
+        padding: 0.75rem 1.5rem;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+  
+    .btn-primary {
+        background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
+        border: none;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(59, 156, 255, 0.4);
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--accent-blue) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 156, 255, 0.6);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+    .btn-link {
+        color: var(--accent-blue);
+        text-decoration: none;
+        padding: 0.5rem 0;
+        display: inline-block;
+        margin-top: 0.5rem;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+        .btn-link:hover {
+            color: var(--light-blue);
+            text-decoration: underline;
+        }
+
+   
+    .text-danger {
+        color: #ff6b6b !important;
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+        display: block;
+    }
+
+    .validation-summary-errors ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .validation-summary-errors li {
+        background-color: rgba(255, 107, 107, 0.2);
+        border-left: 4px solid #ff6b6b;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .alert {
+        border-radius: 10px;
+        border: none;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .alert-success {
+        background-color: rgba(76, 175, 80, 0.2);
+        color: #4caf50;
+        border-left: 4px solid #4caf50;
+    }
+
+    .alert-danger {
+        background-color: rgba(255, 107, 107, 0.2);
+        color: #ff6b6b;
+        border-left: 4px solid #ff6b6b;
+    }
+
+    .alert-info {
+        background-color: rgba(59, 156, 255, 0.2);
+        color: var(--accent-blue);
+        border-left: 4px solid var(--accent-blue);
+    }
+
+  
+    .page-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+        .page-header h3 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+   
+    @@media (max-width: 768px) {
+        .profile-container
+
+    {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .page-header h3 {
+        font-size: 2rem;
+    }
+
+    }
+</style>
+
+<div class="page-header">
+    <h3>@ViewData["Title"]</h3>
+</div>
+
+<partial name="_StatusMessage" for="StatusMessage" />
+
+<div class="profile-container">
+    <form id="email-form" method="post">
+        <div asp-validation-summary="All" class="text-danger validation-summary-errors" role="alert"></div>
+
+        @if (Model.IsEmailConfirmed)
+        {
+            <div class="form-floating">
+                <label asp-for="Email" class="form-label">Email</label>
+                <div class="input-group">
+                    <input asp-for="Email" class="form-control" placeholder="Please enter your email." disabled />
+                    <div class="input-group-append">
+                        <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="form-floating">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input asp-for="Email" class="form-control" placeholder="Please enter your email." disabled />
+                <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
+            </div>
+        }
+
+        <div class="form-floating">
+            <label asp-for="Input.NewEmail" class="form-label">New Email</label>
+            <input asp-for="Input.NewEmail" class="form-control" autocomplete="email" aria-required="true" placeholder="Please enter new email." />
+            <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+        </div>
+
+        <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="w-100 btn btn-lg btn-primary">Change Email</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

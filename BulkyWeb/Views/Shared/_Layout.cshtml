@@ -1,0 +1,1218 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Home Fix</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+
+
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" />
+
+    <style>
+        :root {
+            --primary: #4f7cff;
+            --text: #0f172a;
+            --muted: #64748b;
+            --border: #e6eefc;
+            --card-radius: 18px;
+        }
+
+        .top-nav {
+            background-color: #0F1D58;
+            transition: all .25s ease;
+        }
+
+            .top-nav.nav-sticky {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 9999;
+                background: rgba(11, 31, 75, .92);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+            }
+
+        body.has-sticky {
+            padding-top: 72px;
+        }
+
+        .brand-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            letter-spacing: .4px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            background: rgba(46, 163, 255, .18);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(46, 163, 255, .35);
+        }
+
+            .brand-icon i {
+                color: #2ea3ff;
+                font-size: 16px;
+            }
+
+        .brand-text {
+            font-size: 1.15rem;
+        }
+
+        .navbar .nav-link {
+            position: relative;
+            font-weight: 500;
+            padding: .6rem .9rem;
+            transition: color .25s ease, transform .25s ease, background .25s ease;
+        }
+
+            .navbar .nav-link:hover {
+                color: #2ea3ff !important;
+                transform: translateY(-1px);
+                background: rgba(46, 163, 255, .1);
+                border-radius: 999px;
+            }
+
+        .icon-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .2);
+            background: transparent;
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+
+            .icon-btn:hover {
+                color: #2ea3ff;
+                border-color: rgba(46, 163, 255, .5);
+                transform: translateY(-1px);
+                box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
+            }
+
+        .btn-soft {
+            border-radius: 12px;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+            .btn-soft:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
+            }
+
+       
+        .hero-home {
+            background-color: #0F1D58;
+        }
+
+        .hero-wrap {
+            border-radius: 28px;
+            overflow: hidden;
+            background: #0b1f4b;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .12);
+        }
+
+        .hero-search {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 12%;
+        }
+
+        .hero-search-form {
+            position: relative;
+            width: min(720px, 92%);
+            height: 56px;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, .18);
+        }
+
+        .hero-search-input {
+            height: 100%;
+            width: 100%;
+            border: 0 !important;
+            background: transparent !important;
+            color: #fff !important;
+            padding-left: 48px;
+            padding-right: 140px;
+            font-weight: 500;
+        }
+
+            .hero-search-input::placeholder {
+                color: rgba(255, 255, 255, .60);
+            }
+
+            .hero-search-input:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+
+        .hero-search-btn {
+            position: absolute;
+            right: 8px;
+            height: 40px;
+            padding: 0 22px;
+            border-radius: 12px;
+            border: 0;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(90deg, #1f7bff, #2ea3ff);
+            transition: transform .2s ease, filter .2s ease;
+        }
+
+            .hero-search-btn:hover {
+                filter: brightness(1.06);
+                transform: translateY(-1px);
+                color: #fff;
+            }
+
+        .hero-search-hint {
+            color: rgba(255, 255, 255, .62);
+            text-align: center;
+        }
+
+        .hero-side {
+            height: 100%;
+            position: relative;
+            background: #0b1f4b;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            min-height: 520px;
+            object-fit: cover;
+            display: block;
+            filter: saturate(1.05) contrast(1.05);
+        }
+
+        .hero-side::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(11, 31, 75, .05), rgba(11, 31, 75, .55));
+        }
+
+        .hero-center {
+            padding: 70px 28px 38px;
+            min-height: 520px;
+            background: radial-gradient(1200px 500px at 50% 10%, rgba(20, 83, 190, .25), transparent 60%), #0b1f4b;
+            color: #fff;
+        }
+
+        .hero-mini {
+            color: rgba(255, 255, 255, .70);
+            font-weight: 500;
+            letter-spacing: .3px;
+        }
+
+        .hero-title {
+            font-size: clamp(28px, 4vw, 48px);
+            line-height: 1.12;
+            font-weight: 800;
+            margin: 14px 0 0;
+        }
+
+        .hero-accent {
+            color: #2ea3ff;
+        }
+
+        .hero-checks span {
+            color: rgba(255, 255, 255, .78);
+            font-weight: 600;
+        }
+
+        .hero-checks i {
+            color: #2ea3ff;
+        }
+
+        .hero-btn {
+            background: linear-gradient(90deg, #1f7bff, #2ea3ff);
+            border: 0;
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 700;
+            box-shadow: 0 14px 30px rgba(46, 163, 255, .22);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+            .hero-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 18px 38px rgba(46, 163, 255, .28);
+                color: #fff;
+            }
+
+        .hero-btn-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, .16);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+        }
+
+        .hero-features {
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            padding-top: 18px;
+            margin-top: 26px;
+            margin-top: 15%;
+        }
+
+        .feat {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            color: rgba(255, 255, 255, .78);
+        }
+
+            .feat i {
+                font-size: 18px;
+                width: 38px;
+                height: 38px;
+                border-radius: 999px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, .10);
+                color: #2ea3ff;
+            }
+
+        .feat-title {
+            font-weight: 800;
+            line-height: 1.05;
+        }
+
+        .feat-sub {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .65);
+        }
+
+        
+        .benefits-section {
+            background: #0b1f4b;
+            color: #fff;
+            margin-top: 7%;
+            margin-bottom: 3%;
+        }
+
+        .benefits-title {
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 48px);
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        .benefits-lead {
+            color: rgba(255, 255, 255, .70);
+            font-size: 1rem;
+            line-height: 1.65;
+            max-width: 560px;
+        }
+
+        .benefits-divider {
+            border-color: rgba(255, 255, 255, .10);
+            margin: 18px 0 10px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+            padding: 18px 0;
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .10);
+            flex: 0 0 auto;
+        }
+
+            .benefit-icon i {
+                font-size: 26px;
+                color: rgba(255, 255, 255, .80);
+            }
+
+        .benefit-heading {
+            margin: 0 0 6px;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .benefit-text {
+            margin: 0;
+            color: rgba(255, 255, 255, .65);
+            line-height: 1.6;
+            font-size: .95rem;
+        }
+
+       
+        .how-wrap {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .how-image-wrapper {
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+            .how-image-wrapper img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+        .how-badge {
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: #00a8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0, 168, 255, .3);
+        }
+
+            .how-badge i {
+                color: #fff;
+                font-size: 36px;
+            }
+
+        .how-new-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+
+        .how-new-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .how-new-step {
+            position: relative;
+        }
+
+        .how-step-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #d0d0d0;
+            line-height: 1;
+            flex-shrink: 0;
+            width: 60px;
+        }
+
+        .how-step-heading {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .how-step-text {
+            color: #666;
+            line-height: 1.7;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .improve-img {
+            margin-top: 5%;
+        }
+
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1a2f6b 0%, #2d4a8f 100%);
+            padding: 80px 0 0 0;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+            .cta-section::before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                right: -10%;
+                width: 500px;
+                height: 500px;
+                background: rgba(46, 163, 255, .1);
+                border-radius: 50%;
+                filter: blur(80px);
+            }
+
+        .cta-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .cta-checks {
+            color: rgba(255, 255, 255, .85);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+            .cta-checks i {
+                color: #00d4ff;
+                font-size: 18px;
+            }
+
+        .cta-btn {
+            background: linear-gradient(90deg, #00d4ff, #0ea5e9);
+            border: 0;
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 16px 40px;
+            box-shadow: 0 14px 30px rgba(0, 212, 255, .35);
+            transition: transform .2s ease, box-shadow .2s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+            .cta-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 18px 38px rgba(0, 212, 255, .45);
+                color: #fff;
+            }
+
+            .cta-btn i {
+                font-size: 20px;
+            }
+
+        .cta-image-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-man-img {
+            max-height: 500px;
+            filter: drop-shadow(0 10px 40px rgba(0, 0, 0, .3));
+        }
+
+       
+        .site-footer {
+            background: #15a9e6;
+            color: #fff;
+            padding: 34px 0 22px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .newsletter-box {
+            background: rgba(255, 255, 255, .18);
+            border: 1px solid rgba(255, 255, 255, .22);
+            border-radius: 18px;
+            padding: 18px 18px;
+        }
+
+        .newsletter-title {
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .newsletter-sub {
+            color: rgba(255, 255, 255, .85);
+            font-size: .95rem;
+        }
+
+        .feedback-btn {
+            display: inline-block;
+            background: #0ea5e9;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 999px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+            box-shadow: 0 8px 20px rgba(14, 165, 233, .3);
+        }
+
+            .feedback-btn:hover {
+                filter: brightness(1.08);
+                transform: translateY(-2px);
+                box-shadow: 0 12px 28px rgba(14, 165, 233, .4);
+                color: #fff;
+            }
+
+            .feedback-btn i {
+                font-size: 18px;
+            }
+
+        .footer-brand-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .22);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, .22);
+        }
+
+        .footer-brand-text {
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: .3px;
+        }
+
+        .footer-desc {
+            color: rgba(255, 255, 255, .88);
+            max-width: 420px;
+            line-height: 1.6;
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, .18);
+            border: 1px solid rgba(255, 255, 255, .18);
+            transition: transform .2s ease, background .2s ease;
+        }
+
+            .footer-social a:hover {
+                transform: translateY(-2px);
+                background: rgba(255, 255, 255, .26);
+            }
+
+        .footer-heading {
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 10px;
+        }
+
+            .footer-links a {
+                color: rgba(255, 255, 255, .88);
+                text-decoration: none;
+                transition: color .2s ease, transform .2s ease;
+            }
+
+                .footer-links a:hover {
+                    color: #fff;
+                    transform: translateX(2px);
+                }
+
+        .footer-line {
+            border-color: rgba(255, 255, 255, .22);
+            margin: 28px 0 14px;
+        }
+
+        .footer-copy {
+            color: rgba(255, 255, 255, .85);
+            font-weight: 600;
+            font-size: .95rem;
+        }
+
+        @@media (max-width: 991px) {
+            .newsletter-form,
+            .feedback-form {
+                width: 100%;
+            }
+
+            .hero-center {
+                min-height: auto;
+                padding: 52px 18px 28px;
+            }
+
+            .hero-img {
+                min-height: 280px;
+            }
+
+            .how-new-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .how-step-number {
+                width: 100%;
+            }
+
+            .cta-title {
+                text-align: center;
+            }
+
+            .cta-checks {
+                justify-content: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .cta-man-img {
+                max-height: 350px;
+            }
+
+            .feedback-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg top-nav" id="mainNav">
+            <div class="container-fluid">
+                <a class="navbar-brand brand-wrap text-light px-5" asp-area="Customer" asp-controller="Home" asp-action="Index">
+                    <span class="brand-icon">
+                        <i class="bi bi-house-fill"></i>
+                    </span>
+                    <span class="brand-text">HOME FIX</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link nav-anim active text-light" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-anim text-light px-3" asp-area="Admin" asp-controller="Order" asp-action="Index">Manage Order</a>
+                        </li>
+
+                        @if (User.IsInRole(SD.Role_Admin))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Content Management
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Service" asp-action="Index">Service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Team" asp-action="Index">Team</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">User Manage</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item"  asp-controller="Feedback" asp-action="Index">Feedback</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                               
+                                @await Component.InvokeAsync("BookingCart")
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  
+    <section id="heroHeader" class="hero-home">
+        <div class="container-fluid">
+            <div class="hero-wrap">
+                <div class="row g-0 align-items-stretch">
+                   
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="hero-side hero-left">
+                            <img src="~/images/nav/left.jpg" alt="technician" class="hero-img">
+                        </div>
+                    </div>
+
+                
+                    <div class="col-lg-6">
+                        <div class="hero-center text-center">
+                            <p class="hero-mini mb-2">Maintenances &nbsp; • &nbsp; Repairs &nbsp; • &nbsp; Improvements</p>
+
+                            <h1 class="hero-title">
+                                Need <span class="hero-accent">improvement</span><br>
+                                or <span class="hero-accent">repair</span> your home?<br>
+                                we can <span class="hero-accent">help</span>!
+                            </h1>
+
+                            <div class="hero-checks d-flex justify-content-center gap-4 mt-3 flex-wrap">
+                                <span><i class="bi bi-check2-circle me-2"></i>Free Quotes</span>
+                                <span><i class="bi bi-check2-circle me-2"></i>100% Commitment-Free</span>
+                            </div>
+
+                            <div class="mt-4">
+                                <a href="tel:+201000000000" class="btn hero-btn px-4 py-2">
+                                    Call Us Now
+                                    <span class="hero-btn-icon ms-2"><i class="bi bi-telephone-fill"></i></span>
+                                </a>
+                            </div>
+
+                            <div class="hero-search">
+                                <form class="hero-search-form" onsubmit="return false;">
+                                    <input id="searchInput" type="text" class="form-control hero-search-input" placeholder="Search services..." />
+                                    <button id="searchBtn" class="btn hero-search-btn" type="button">Search</button>
+                                </form>
+                                <small class="hero-search-hint d-block mt-2">Try: plumber, electrician, AC, painting...</small>
+                            </div>
+
+                            
+                            <div class="hero-features">
+                                <div class="row g-3 text-start">
+                                    <div class="col-6 col-md-3">
+                                        <div class="feat">
+                                            <i class="bi bi-award"></i>
+                                            <div>
+                                                <div class="feat-title">Satisfaction</div>
+                                                <div class="feat-sub">Guarantee</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="feat">
+                                            <i class="bi bi-clock"></i>
+                                            <div>
+                                                <div class="feat-title">24H</div>
+                                                <div class="feat-sub">Availability</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="feat">
+                                            <i class="bi bi-geo-alt"></i>
+                                            <div>
+                                                <div class="feat-title">Local</div>
+                                                <div class="feat-sub">Professional</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="feat">
+                                            <i class="bi bi-calendar2-week"></i>
+                                            <div>
+                                                <div class="feat-title">Flexible</div>
+                                                <div class="feat-sub">Appointments</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="hero-side hero-right">
+                            <img src="~/images/nav/right.jpg" alt="plumber" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        @RenderBody()
+    </section>
+ 
+    <section class="benefits-section py-5">
+        <div class="container py-2">
+            <div class="row align-items-start gy-3 mb-4">
+                <div class="col-lg-6">
+                    <h2 class="benefits-title">
+                        Fast, Friendly, and<br>
+                        Satisfaction Guarantee
+                    </h2>
+                </div>
+                <div class="col-lg-6">
+                    <p class="benefits-lead mb-0">
+                        No matter how big or small your work is, whether it's for the interior or exterior of your home,
+                        we are ready to serve and help you solve your home problems.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="benefits-divider">
+
+            <div class="row g-4 mt-1">
+                <div class="col-lg-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h5 class="benefit-heading">Satisfaction Guarantee</h5>
+                            <p class="benefit-text mb-0">
+                                You don't need to worry about scams or performance results. Our company is verified and strives
+                                for optimal results.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h5 class="benefit-heading">Local Professionals</h5>
+                            <p class="benefit-text mb-0">
+                                Our services cover urban, suburban, and rural locations for both long and short-term maintenance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-calendar2-week"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h5 class="benefit-heading">Flexible Appointments</h5>
+                            <p class="benefit-text mb-0">
+                                We offer convenient appointment times that can fit your busy schedule — day or night, 7 days a week.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-receipt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h5 class="benefit-heading">Free Quotes</h5>
+                            <p class="benefit-text mb-0">
+                                Get personalized cost estimates without any obligation. Enjoy transparency and peace of mind.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h5 class="benefit-heading">Fast 24-Hour Service</h5>
+                            <p class="benefit-text mb-0">
+                                Need fast repairs? Our experts are available anytime to help you solve the problem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h5 class="benefit-heading">100% Commitment-Free</h5>
+                            <p class="benefit-text mb-0">
+                                Ask us about the problems you're facing. We offer a no-commitment approach to put your mind at ease.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="how-wrap">
+        <div class="container">
+            <div class="row align-items-center g-5">
+               
+                <div class="col-lg-5">
+                    <div class="how-image-wrapper position-relative">
+                      
+                        <img src="/images/layout/howitwork.jpg" alt="Professional technician" class="img-fluid rounded-5">
+                        <div class="how-badge position-absolute">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+             
+                <div class="col-lg-7">
+                    <h2 class="how-new-title">How HomeFix works?</h2>
+
+                    <div class="how-new-steps">
+                     
+                        <div class="how-new-step d-flex gap-4">
+                            <div class="how-step-number">1.</div>
+                            <div class="how-step-content">
+                                <h4 class="how-step-heading">Search for Services or Call Us</h4>
+                                <p class="how-step-text">
+                                    Simply select the type of service you're looking for, from plumbing to home repairs and more, or give us a call for immediate assistance.
+                                </p>
+                            </div>
+                        </div>
+
+                     
+                        <div class="how-new-step d-flex gap-4">
+                            <div class="how-step-number">2.</div>
+                            <div class="how-step-content">
+                                <h4 class="how-step-heading">Browse Local Experts</h4>
+                                <p class="how-step-text">
+                                    Explore detailed professional profiles, view full descriptions, years of experience, number of completed jobs, and deposit requirements.
+                                </p>
+                            </div>
+                        </div>
+
+                    
+                        <div class="how-new-step d-flex gap-4">
+                            <div class="how-step-number">3.</div>
+                            <div class="how-step-content">
+                                <h4 class="how-step-heading">Book Your Service</h4>
+                                <p class="how-step-text">
+                                    Choose the time that works best for you and easily book your preferred professional with a few clicks.
+                                </p>
+                            </div>
+                        </div>
+
+                  
+                        <div class="how-new-step d-flex gap-4">
+                            <div class="how-step-number">4.</div>
+                            <div class="how-step-content">
+                                <h4 class="how-step-heading">Enjoy your day</h4>
+                                <p class="how-step-text">
+                                    Sit back and relax while a qualified expert arrives to complete the job efficiently and to your satisfaction.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-0 mb-0">
+        <main role="main" class="pb-3">
+            <partial name="_Notification">
+        </main>
+    </div>
+
+
+    <section class="cta-section">
+        <div class="container pb-5">
+            <div class="row align-items-center g-5">
+              
+                <div class="col-lg-6">
+                    <h2 class="cta-title">
+                        Already to improve<br>
+                        or repair your home?<br>
+                        Let's Talk!
+                    </h2>
+
+                    <div class="cta-checks d-flex gap-4 mb-4">
+                        <span><i class="bi bi-check-lg me-2"></i>Free Quotes</span>
+                        <span><i class="bi bi-check-lg me-2"></i>100% Commitment-Free</span>
+                    </div>
+
+                    <a href="tel:+201000000000" class="btn cta-btn">
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        Call Us Now
+                    </a>
+                </div>
+
+                
+                <div class="col-lg-6">
+                    <div class="cta-image-wrapper text-center">
+                       
+                        <img src="~/images/layout/Call us.jpg" alt="Professional worker"
+                             class="img-fluid cta-man-img rounded-5">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <footer class="site-footer">
+        <div class="container">
+           
+            <div class="newsletter-box">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <h5 class="newsletter-title mb-2">Have a Problem or Feedback?</h5>
+                        <p class="newsletter-sub mb-0">
+                            We'd love to hear from you! Share your concerns, complaints, or comments about our service and our customer service team will get back to you soon.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 text-lg-end text-center">
+                        <a class="dropdown-item feedback-btn d-flex align-items-center justify-content-center"
+                           asp-controller="Feedback"
+                           asp-action="Create">
+                          
+                            <i class="bi bi-chat-dots-fill me-2"></i>Click Here
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="row mt-5 gy-4">
+               
+                <div class="col-lg-5">
+                    <div class="footer-brand d-flex align-items-center gap-2">
+                        <span class="footer-brand-icon"><i class="bi bi-house-fill"></i></span>
+                        <span class="footer-brand-text">Home Fix</span>
+                    </div>
+
+                    <p class="footer-desc mt-3">
+                        Home Fix is your premier destination for top-notch smart home service and repair.
+                    </p>
+
+                    <div class="footer-social d-flex gap-3 mt-3">
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-6 col-md-4 ms-md-auto">
+                            <h6 class="footer-heading">Company</h6>
+                            <ul class="footer-links">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Our Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4">
+                            <h6 class="footer-heading">Legal</h6>
+                            <ul class="footer-links">
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Cookies</a></li>
+                                <li><a href="#">License</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-line">
+
+            <p class="footer-copy text-center mb-0">
+                Made with <i class="bi bi-heart-fill"></i> by MMMSN TEAM
+            </p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="//cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+
+    <script src="https://cdn.tiny.cloud/1/4e0jbuijq9tssu470d0jvg73zxysdp8jmb9d7hn6paxxkf3s/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+    
+        const nav = document.getElementById("mainNav");
+        const header = document.getElementById("heroHeader");
+
+        function handleSticky() {
+            if (header) {
+                const headerBottom = header.offsetTop + header.offsetHeight;
+                const scrolled = window.scrollY;
+
+                if (scrolled >= headerBottom) {
+                    nav.classList.add("nav-sticky");
+                    document.body.classList.add("has-sticky");
+                } else {
+                    nav.classList.remove("nav-sticky");
+                    document.body.classList.remove("has-sticky");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", handleSticky);
+        window.addEventListener("load", handleSticky);
+        window.addEventListener("resize", handleSticky);
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+

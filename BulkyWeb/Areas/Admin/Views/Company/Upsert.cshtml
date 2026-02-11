@@ -1,0 +1,172 @@
+﻿@model Company
+
+<style>
+    :root {
+        --hf-navy: #0b1f4b;
+        --hf-blue: #2ea3ff;
+        --hf-bg: #f6f8fc;
+        --hf-card: #ffffff;
+        --hf-muted: #64748b;
+        --hf-danger: #dc3545;
+    }
+
+    body {
+        background: var(--hf-bg);
+    }
+
+    .admin-wrap {
+        padding: 48px 12px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .admin-card {
+        background: var(--hf-card);
+        border-radius: 18px;
+        border: 1px solid rgba(0,0,0,.06);
+        box-shadow: 0 18px 45px rgba(0,0,0,.10);
+        overflow: hidden;
+        margin-top: 24px;
+    }
+
+    .admin-head {
+        background: linear-gradient(90deg, rgba(46,163,255,.25), transparent 60%), var(--hf-navy);
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+        letter-spacing: 2px;
+        padding: 24px 16px;
+        font-size: 1.5rem;
+    }
+
+    .admin-body {
+        padding: 32px 24px;
+    }
+
+    .btn-main {
+        background: var(--hf-navy);
+        border: 0;
+        color: #fff;
+        font-weight: 900;
+        border-radius: 14px;
+        padding: 12px 20px;
+        box-shadow: 0 16px 34px rgba(11,31,75,.18);
+        transition: all 0.3s ease;
+    }
+
+        .btn-main:hover {
+            background: #0E2958;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(11,31,75,.25);
+        }
+
+    .btn-soft {
+        border-radius: 12px;
+        padding: 9px 16px;
+        font-weight: 800;
+        border: 1px solid rgba(11,31,75,.18);
+        transition: all 0.25s ease;
+        font-size: 0.9rem;
+    }
+
+    .btn-edit {
+        background: rgba(11,31,75,.07);
+        color: var(--hf-navy);
+    }
+
+        .btn-edit:hover {
+            background: #0E2958;
+            color: #fff;
+            border-color: var(--hf-navy);
+            transform: translateY(-1px);
+        }
+
+    .form-label {
+        font-weight: 700;
+        color: var(--hf-navy);
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    .form-control {
+        border-radius: 12px;
+        border: 1px solid rgba(0,0,0,.1);
+        padding: 12px 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: var(--hf-blue);
+            box-shadow: 0 0 0 0.2rem rgba(46,163,255,.15);
+        }
+
+    .text-danger {
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-top: 4px;
+    }
+</style>
+
+<div class="container admin-wrap">
+    <div class="admin-card">
+        <div class="admin-head">@(Model.Id != 0 ? "UPDATE" : "CREATE") COMPANY</div>
+
+        <div class="admin-body">
+            <form method="post">
+                <input asp-for="Id" hidden />
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label asp-for="Name" class="form-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="PhoneNumber" class="form-label"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="StreetAddress" class="form-label"></label>
+                        <input asp-for="StreetAddress" class="form-control" />
+                        <span asp-validation-for="StreetAddress" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="City" class="form-label"></label>
+                        <input asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="State" class="form-label"></label>
+                        <input asp-for="State" class="form-control" />
+                        <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3 mt-4">
+                    @if (Model.Id != 0)
+                    {
+                        <button type="submit" class="btn btn-main px-5">Update</button>
+                    }
+                    else
+                    {
+                        <button type="submit" class="btn btn-main px-5">Create</button>
+                    }
+                    <a asp-controller="Company" asp-action="Index" class="btn btn-soft btn-edit px-5">
+                        Back To List
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

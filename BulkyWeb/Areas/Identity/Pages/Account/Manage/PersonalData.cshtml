@@ -1,0 +1,242 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "Personal Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<style>
+
+    :root {
+        --primary-navy: #1e3a5f;
+        --secondary-navy: #2d4a6f;
+        --accent-blue: #3b9cff;
+        --light-blue: #4da8ff;
+        --text-white: #ffffff;
+        --text-light: #e0e6ed;
+        --background-dark: #0f1f35;
+        --background-gradient-start: #1a2942;
+        --background-gradient-end: #0f1f35;
+        --danger-red: #ff6b6b;
+        --danger-dark: #ff5252;
+    }
+
+    body {
+        background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+        min-height: 100vh;
+        color: var(--text-white);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h3, h1, h2, h4, h5, h6 {
+        color: var(--text-white);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+   
+    .personal-data-container {
+        background: rgba(30, 58, 95, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 700px;
+        margin: 2rem auto;
+    }
+
+
+    p {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+    }
+
+        p strong {
+            color: var(--danger-red);
+            font-weight: 600;
+        }
+
+    .btn {
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
+        color: var(--text-white);
+        box-shadow: 0 4px 15px rgba(59, 156, 255, 0.4);
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--accent-blue) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 156, 255, 0.6);
+            color: var(--text-white);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+    .btn-danger {
+        background: linear-gradient(135deg, var(--danger-red) 0%, var(--danger-dark) 100%);
+        color: var(--text-white);
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    }
+
+        .btn-danger:hover {
+            background: linear-gradient(135deg, var(--danger-dark) 0%, var(--danger-red) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+            color: var(--text-white);
+        }
+
+        .btn-danger:active {
+            transform: translateY(0);
+        }
+
+    form {
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+  
+    .warning-box {
+        background: rgba(255, 107, 107, 0.15);
+        border: 2px solid rgba(255, 107, 107, 0.4);
+        border-radius: 10px;
+        padding: 1.25rem;
+        margin: 1.5rem 0;
+    }
+
+        .warning-box strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+  
+    .info-box {
+        background: rgba(59, 156, 255, 0.15);
+        border: 2px solid rgba(59, 156, 255, 0.4);
+        border-radius: 10px;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+ 
+    .page-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+        .page-header h3 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+
+    .action-section {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+
+    .alert {
+        border-radius: 10px;
+        border: none;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .alert-success {
+        background-color: rgba(76, 175, 80, 0.2);
+        color: #4caf50;
+        border-left: 4px solid #4caf50;
+    }
+
+    .alert-danger {
+        background-color: rgba(255, 107, 107, 0.2);
+        color: #ff6b6b;
+        border-left: 4px solid #ff6b6b;
+    }
+
+    .alert-info {
+        background-color: rgba(59, 156, 255, 0.2);
+        color: var(--accent-blue);
+        border-left: 4px solid var(--accent-blue);
+    }
+
+
+    @@media (max-width: 768px) {
+        .personal-data-container
+
+    {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .page-header h3 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    }
+</style>
+
+<div class="page-header">
+    <h3>@ViewData["Title"]</h3>
+</div>
+
+<div class="personal-data-container">
+    <div class="info-box">
+        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+    </div>
+
+    <div class="warning-box">
+        <p>
+            <strong>⚠️ Warning</strong>
+            Deleting this data will permanently remove your account, and this cannot be recovered.
+        </p>
+    </div>
+
+    <div class="action-section">
+        <form id="download-data" asp-page="DownloadPersonalData" method="post">
+            <button class="btn btn-primary" type="submit">Download</button>
+        </form>
+
+        <p style="display: inline-block; margin: 0;">
+            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Delete</a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

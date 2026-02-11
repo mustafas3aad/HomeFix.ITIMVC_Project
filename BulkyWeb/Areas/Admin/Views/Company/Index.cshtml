@@ -1,0 +1,166 @@
+﻿@model List<Company>
+
+<style>
+    :root {
+        --hf-navy: #0b1f4b;
+        --hf-blue: #2ea3ff;
+        --hf-bg: #f6f8fc;
+        --hf-card: #ffffff;
+        --hf-muted: #64748b;
+        --hf-danger: #dc3545;
+    }
+
+    body {
+        background: var(--hf-bg);
+    }
+
+    .admin-wrap {
+        padding: 48px 12px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .admin-card {
+        background: var(--hf-card);
+        border-radius: 18px;
+        border: 1px solid rgba(0,0,0,.06);
+        box-shadow: 0 18px 45px rgba(0,0,0,.10);
+        overflow: hidden;
+        margin-top: 24px;
+    }
+
+    .admin-head {
+        background: linear-gradient(90deg, rgba(46,163,255,.25), transparent 60%), var(--hf-navy);
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+        letter-spacing: 2px;
+        padding: 24px 16px;
+        font-size: 1.5rem;
+    }
+
+    .admin-body {
+        padding: 32px 24px;
+    }
+
+    .btn-main {
+        background: var(--hf-navy);
+        border: 0;
+        color: #fff;
+        font-weight: 900;
+        border-radius: 14px;
+        padding: 12px 20px;
+        box-shadow: 0 16px 34px rgba(11,31,75,.18);
+        transition: all 0.3s ease;
+    }
+
+        .btn-main:hover {
+            background: #0E2958;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(11,31,75,.25);
+        }
+
+    .admin-table {
+        margin: 0;
+    }
+
+        .admin-table thead th {
+            font-size: .85rem;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            color: var(--hf-muted);
+            border-bottom: 2px solid rgba(0,0,0,.1) !important;
+            padding: 16px 12px;
+            font-weight: 700;
+            background: rgba(11,31,75,.02);
+        }
+
+        .admin-table tbody td {
+            padding: 14px 12px;
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            font-weight: 600;
+            color: #0b1f4b;
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+
+        .admin-table tbody tr {
+            transition: all 0.2s ease;
+        }
+
+            .admin-table tbody tr:hover {
+                background: rgba(46,163,255,.06) !important;
+            }
+
+                .admin-table tbody tr:hover td {
+                    background: transparent !important;
+                }
+
+    .btn-soft {
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-weight: 800;
+        border: 1px solid rgba(11,31,75,.18);
+        transition: all 0.25s ease;
+        font-size: 0.85rem;
+    }
+
+    .btn-edit {
+        background: rgba(11,31,75,.07);
+        color: var(--hf-navy);
+    }
+
+        .btn-edit:hover {
+            background: var(--hf-navy);
+            color: #fff;
+            border-color: var(--hf-navy);
+            transform: translateY(-1px);
+        }
+
+    .btn-delete {
+        background: rgba(220,53,69,.08);
+        color: var(--hf-danger);
+        border-color: rgba(220,53,69,.22);
+    }
+
+        .btn-delete:hover {
+            background: var(--hf-danger);
+            color: #fff;
+            border-color: var(--hf-danger);
+            transform: translateY(-1px);
+        }
+</style>
+
+<div class="container admin-wrap">
+    <div class="admin-card">
+        <div class="admin-head">COMPANY LIST</div>
+
+        <div class="admin-body">
+            <div class="d-flex justify-content-end mb-4">
+                <a asp-controller="Company" asp-action="Upsert" class="btn btn-main">
+                    <i class="bi bi-plus-circle-dotted me-2"></i> Create New Company
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table id="tblData" class="table admin-table align-middle" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Phone Number</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/company.js"></script>
+}

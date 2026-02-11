@@ -1,0 +1,133 @@
+﻿@model int
+
+<style>
+    :root {
+        --brand: #0b1f4b;
+        --brand2: #0e2a66;
+        --bg: #e8eef5;
+        --card: #ffffff;
+        --muted: #64748b;
+        --shadow: 0 18px 45px rgba(0,0,0,.12);
+        --line: rgba(0,0,0,.08);
+    }
+
+    body {
+        background: var(--bg);
+    }
+
+    .confirmation-wrap {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 12px;
+    }
+
+    .confirmation-card {
+        background: var(--card);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        max-width: 700px;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .confirmation-head {
+        background: linear-gradient(90deg, var(--brand), var(--brand2));
+        color: #fff;
+        padding: 28px 20px;
+    }
+
+        .confirmation-head h1 {
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+    .confirmation-body {
+        padding: 32px 28px;
+    }
+
+        .confirmation-body p {
+            font-size: 1.05rem;
+            color: #0f172a;
+            font-weight: 600;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+    .order-number {
+        background: #f1f5f9;
+        border: 1px dashed var(--line);
+        padding: 14px;
+        border-radius: 12px;
+        font-weight: 900;
+        font-size: 1.1rem;
+        color: var(--brand);
+        margin: 20px 0;
+    }
+
+    .confirmation-note {
+        color: var(--muted);
+        font-size: .95rem;
+    }
+
+    .confirmation-image {
+        margin-top: 24px;
+    }
+
+        .confirmation-image img {
+            max-width: 65%;
+        }
+
+    .manage-link {
+        display: inline-block;
+        margin-top: 20px;
+        font-weight: 800;
+        color: var(--brand);
+        text-decoration: none;
+    }
+
+        .manage-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="confirmation-wrap">
+    <div class="confirmation-card">
+
+       
+        <div class="confirmation-head">
+            <h1>Team On The Way 🚀</h1>
+        </div>
+
+      
+        <div class="confirmation-body">
+
+            <p>
+                Thank you for choosing our service.<br />
+                Our professional team is currently on the way to your location.
+            </p>
+
+            <p>
+                ⏱ <strong>Expected arrival time:</strong><br />
+                Within <strong>2 to 4 hours</strong>.
+            </p>
+
+            <div class="order-number">
+                Service Request Number: #@Model
+            </div>
+
+            <p class="confirmation-note">
+                If you need to cancel, manage, or track the status of your order, you can easily
+                <strong>Call Us</strong> or use the <strong>Manage Order</strong> section on our website.
+            </p>
+
+            <div class="confirmation-image">
+                <img src="~/images/signup/signup.jpg" class="rounded-5" alt="Service Confirmation" />
+            </div>
+
+        </div>
+    </div>
+</div>

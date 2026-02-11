@@ -1,0 +1,195 @@
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CopyComplete
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+E:\Visual Studio Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CopyComplete
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+F:\Mustafa\Courses\.Net Core\MVC\Project\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CopyComplete
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+C:\Users\Mohamed Saad\OneDrive\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CopyComplete
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+F:\Mustafa\Courses\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CopyComplete
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+F:\Mustafa\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
+F:\Mustafa\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.Da.6DBD1FC4.Up2Date
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.Da.6DBD1FC4.Up2Date
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+D:\Programing\Courses\Back_End\.Net Core\MVC\Projects\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.Da.6DBD1FC4.Up2Date
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+C:\Users\h p\Desktop\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.Da.6DBD1FC4.Up2Date
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+C:\Users\h p\Desktop\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.dll
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.pdb
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.dll
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.dll
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Models.pdb
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\bin\Debug\net8.0\Bulky.Utility.pdb
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.AssemblyInfo.cs
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.Da.6DBD1FC4.Up2Date
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.dll
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\refint\Bulky.DataAccess.dll
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.pdb
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.genruntimeconfig.cache
+D:\Games\MMMSN\MMMSN\Bulky\Bulky.DataAccess\obj\Debug\net8.0\ref\Bulky.DataAccess.dll

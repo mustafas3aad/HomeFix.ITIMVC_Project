@@ -1,0 +1,309 @@
+﻿@page
+@model ExternalLoginsModel
+@{
+    ViewData["Title"] = "Manage your external logins";
+    ViewData["ActivePage"] = ManageNavPages.ExternalLogins;
+}
+
+<style>
+   
+    :root {
+        --primary-navy: #1e3a5f;
+        --secondary-navy: #2d4a6f;
+        --accent-blue: #3b9cff;
+        --light-blue: #4da8ff;
+        --text-white: #ffffff;
+        --text-light: #e0e6ed;
+        --background-dark: #0f1f35;
+        --background-gradient-start: #1a2942;
+        --background-gradient-end: #0f1f35;
+    }
+
+    body {
+        background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+        min-height: 100vh;
+        color: var(--text-white);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h3, h1, h2, h4, h5, h6 {
+        color: var(--text-white);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+  
+    .external-logins-container {
+        background: rgba(30, 58, 95, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 800px;
+        margin: 2rem auto;
+    }
+
+  
+    .table {
+        width: 100%;
+        margin-bottom: 2rem;
+        color: var(--text-white);
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+        .table tbody tr {
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+            .table tbody tr:hover {
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+            .table tbody tr:first-child td:first-child {
+                border-top-left-radius: 10px;
+            }
+
+            .table tbody tr:first-child td:last-child {
+                border-top-right-radius: 10px;
+            }
+
+            .table tbody tr:last-child {
+                border-bottom: none;
+            }
+
+                .table tbody tr:last-child td:first-child {
+                    border-bottom-left-radius: 10px;
+                }
+
+                .table tbody tr:last-child td:last-child {
+                    border-bottom-right-radius: 10px;
+                }
+
+        .table td {
+            padding: 1rem 1.25rem;
+            vertical-align: middle;
+            border: none;
+        }
+
+            .table td:first-child {
+                font-weight: 600;
+                color: var(--text-light);
+                font-size: 1.05rem;
+            }
+
+            .table td:last-child {
+                text-align: right;
+                width: 150px;
+            }
+
+
+    .btn {
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
+        color: var(--text-white);
+        box-shadow: 0 4px 15px rgba(59, 156, 255, 0.4);
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--accent-blue) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 156, 255, 0.6);
+            color: var(--text-white);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+  
+    #socialLoginList {
+        margin-top: 1rem;
+    }
+
+        #socialLoginList p {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        #socialLoginList .btn {
+            margin: 0;
+        }
+
+
+    form {
+        margin: 0;
+    }
+
+   
+    hr {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 1.5rem 0;
+    }
+
+
+    .alert {
+        border-radius: 10px;
+        border: none;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .alert-success {
+        background-color: rgba(76, 175, 80, 0.2);
+        color: #4caf50;
+        border-left: 4px solid #4caf50;
+    }
+
+    .alert-danger {
+        background-color: rgba(255, 107, 107, 0.2);
+        color: #ff6b6b;
+        border-left: 4px solid #ff6b6b;
+    }
+
+    .alert-info {
+        background-color: rgba(59, 156, 255, 0.2);
+        color: var(--accent-blue);
+        border-left: 4px solid var(--accent-blue);
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+        .page-header h3 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+
+    .section-title {
+        color: var(--text-white);
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+        margin-top: 0;
+    }
+
+
+    @@media (max-width: 768px) {
+        .external-logins-container
+
+    {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .page-header h3 {
+        font-size: 2rem;
+    }
+
+    .table td {
+        display: block;
+        width: 100%;
+        text-align: left !important;
+    }
+
+        .table td:last-child {
+            padding-top: 0.5rem;
+        }
+
+    .table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+
+    #socialLoginList p {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    }
+</style>
+
+<div class="page-header">
+    <h3>@ViewData["Title"]</h3>
+</div>
+
+<partial name="_StatusMessage" for="StatusMessage" />
+
+<div class="external-logins-container">
+    @if (Model.CurrentLogins?.Count > 0)
+    {
+        <h3 class="section-title">Registered Logins</h3>
+        <table class="table">
+            <tbody>
+                @foreach (var login in Model.CurrentLogins)
+                {
+                    <tr>
+                        <td id="@($"login-provider-{login.LoginProvider}")">@login.ProviderDisplayName</td>
+                        <td>
+                            @if (Model.ShowRemoveButton)
+                            {
+                                <form id="@($"remove-login-{login.LoginProvider}")" asp-page-handler="RemoveLogin" method="post">
+                                    <div>
+                                        <input asp-for="@login.LoginProvider" name="LoginProvider" type="hidden" />
+                                        <input asp-for="@login.ProviderKey" name="ProviderKey" type="hidden" />
+                                        <button type="submit" class="btn btn-primary" title="Remove this @login.ProviderDisplayName login from your account">Remove</button>
+                                    </div>
+                                </form>
+                            }
+                            else
+                            {
+                                @: &nbsp;
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    @if (Model.OtherLogins?.Count > 0)
+    {
+        <h4>Add another service to log in.</h4>
+        <hr />
+        <form id="link-login-form" asp-page-handler="LinkLogin" method="post" class="form-horizontal">
+            <div id="socialLoginList">
+                <p>
+                    @foreach (var provider in Model.OtherLogins)
+                    {
+                        <button id="@($"link-login-button-{provider.Name}")" type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                    }
+                </p>
+            </div>
+        </form>
+    }
+</div>
+

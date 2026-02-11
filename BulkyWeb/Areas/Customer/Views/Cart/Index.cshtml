@@ -1,0 +1,324 @@
+﻿@model BookingCartVM
+
+<style>
+    :root {
+        --brand: #0b1f4b;
+        --brand2: #0e2a66;
+        --bg: #e8eef5;
+        --muted: #64748b;
+        --card: #ffffff;
+        --line: rgba(0, 0, 0, .08);
+        --shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        --danger: #e74c3c;
+    }
+
+    body {
+        background: var(--bg);
+    }
+
+    /* Page Title Section - Similar to SERVICE LIST */
+    .cart-header-section {
+        background: linear-gradient(90deg, #0b1f4b, #0e2a66);
+        padding: 24px 32px;
+        border-radius: 16px 16px 0 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        margin-bottom: 0;
+    }
+
+    .page-title {
+        color: #fff;
+        margin: 0;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+    }
+
+    .btn-continue {
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .3);
+        color: #fff;
+        font-weight: 700;
+        border-radius: 25px;
+        padding: 8px 24px;
+        text-transform: capitalize;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+        .btn-continue:hover {
+            background: rgba(255, 255, 255, .1);
+            border-color: rgba(255, 255, 255, .5);
+            color: #fff;
+        }
+
+    /* Main Card */
+    .main-card {
+        border-radius: 0 0 16px 16px;
+        background: var(--card);
+        border: none;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+    }
+
+    /* Cart Item */
+    .cart-item {
+        padding: 28px 32px;
+        border-bottom: 1px solid #f0f0f0;
+        transition: background 0.2s;
+    }
+
+        .cart-item:hover {
+            background: #fafbfc;
+        }
+
+    .item-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 1px solid #e8e8e8;
+    }
+
+    .item-details {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    .item-title {
+        font-weight: 900;
+        color: #0f172a;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.95rem;
+    }
+
+    .item-description {
+        margin: 0;
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.4;
+    }
+
+    .item-price {
+        font-weight: 900;
+        color: #0f172a;
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    /* Quantity Display */
+    .qty-display {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: flex-end;
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    /* Remove Button */
+    .btn-remove {
+        width: 46px;
+        height: 46px;
+        border-radius: 10px;
+        border: none;
+        background: rgba(231, 76, 60, .1);
+        color: var(--danger);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-decoration: none;
+    }
+
+        .btn-remove:hover {
+            background: rgba(231, 76, 60, .2);
+            color: var(--danger);
+        }
+
+    /* Total Section */
+    .total-section {
+        padding: 32px;
+        background: #fafbfc;
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .total-label {
+        font-weight: 900;
+        color: #0f172a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 1rem;
+    }
+
+    .total-amount {
+        font-weight: 900;
+        color: #0f172a;
+        font-size: 1.5rem;
+        text-align: right;
+    }
+
+    /* Summary Button */
+    .summary-section {
+        padding: 28px 32px;
+        display: flex;
+        justify-content: center;
+        background: #fff;
+    }
+
+    .btn-summary {
+        background: linear-gradient(90deg, #0b1f4b, #0e2a66);
+        border: none;
+        color: #fff;
+        font-weight: 900;
+        border-radius: 12px;
+        padding: 14px 60px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 8px 20px rgba(11, 31, 75, .25);
+        transition: all 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+        .btn-summary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(11, 31, 75, .35);
+            color: #fff;
+        }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .cart-header-section
+
+    {
+        padding: 20px 16px;
+    }
+
+    .cart-item {
+        padding: 20px 16px;
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-details {
+        padding-left: 12px;
+    }
+
+    .qty-display {
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+
+    .total-amount {
+        text-align: left;
+        margin-top: 8px;
+    }
+
+    .btn-summary {
+        width: 100%;
+    }
+
+    }
+</style>
+
+<form method="post">
+    <!-- Header Section - Outside Main Card -->
+    <div class="container mt-5 pt-3">
+        <div class="cart-header-section">
+            <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                <h1 class="page-title">BOOKING CART</h1>
+                <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn-continue">
+                    <i class="bi bi-arrow-left"></i>
+                    Continue Booking
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Card - Continues from header -->
+        <div class="main-card">
+
+            <!-- Cart Items -->
+            <div>
+                @foreach (var item in Model.BookingCartList)
+                {
+                    <div class="cart-item">
+                        <div class="row align-items-center g-3">
+                            <!-- Image & Details -->
+                            <div class="col-12 col-lg-7">
+                                <div class="d-flex align-items-start">
+                                    @if (item.Team.TeamImages != null && item.Team.TeamImages.Count() > 0)
+                                    {
+                                        <img src="@item.Team.TeamImages.FirstOrDefault().ImageUrl" class="item-image" alt="@item.Team.Title" />
+                                    }
+                                    else
+                                    {
+                                        <img src="https://placehold.co/70x70/0b1f4b/ffffff?text=Team" class="item-image" alt="Team" />
+                                    }
+                                    <div class="item-details">
+                                        <h3 class="item-title">@item.Team.Title</h3>
+                                        <p class="item-description">@Html.Raw(item.Team.Description)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Price -->
+                            <div class="col-6 col-lg-2">
+                                <div class="item-price">
+                                    @item.Team.DepositAmount.ToString("c")
+                                </div>
+                            </div>
+
+                            <!-- Quantity -->
+                            <div class="col-6 col-lg-2">
+                                <div class="qty-display">
+                                    <span style="color: #64748b;">×</span>
+                                    <span>@item.Count</span>
+                                </div>
+                            </div>
+
+                            <!-- Remove Button -->
+                            <div class="col-12 col-lg-1 d-flex justify-content-lg-end justify-content-start">
+                                <a asp-action="Remove" asp-route-CartId="@item.Id" class="btn-remove" title="Remove item">
+                                    <i class="bi bi-trash3"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Total Section -->
+            <div class="total-section">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="total-label">Total (USD)</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="total-amount">@Model.orderHeader.OrderTotal.ToString("c")</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Button -->
+            <div class="summary-section">
+                <a asp-action="Summary" class="btn-summary">
+                    SUMMARY
+                </a>
+            </div>
+
+        </div>
+    </div>
+</form>
