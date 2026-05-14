@@ -111,3 +111,15 @@ Contributions are welcome! To contribute:
 
 
 > *"Fix your home, fix your life."* 🔧
+
+
+---
+
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/fc6ab60f-47fa-4a1e-a713-8351e6545640"
+    width="850"
+    alt="Project Screenshot"
+  />
+</p>
+
